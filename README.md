@@ -48,13 +48,11 @@ _Ensure the repository structure matches the actual files committed to GitHub._
 Clone the repository and install dependencies:
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/Zeina139/az-store-automation.git
 cd az-store-automation
 npm ci
-npx playwright install
+npx playwright install --with-deps
 ```
-
-Replace `<YOUR_REPOSITORY_URL>` with the actual GitHub repository URL.
 
 On Windows PowerShell, use `npx.cmd` instead of `npx` if the execution policy prevents running `npx.ps1`.
 
@@ -71,13 +69,6 @@ MAILSLURP_API_KEY=
 ```
 
 Populate these variables with valid test credentials and the MailSlurp API key. The admin credentials must belong to an account with the required administrator permissions.
-
-**Security:**
-
-- Never commit `.env` or real credentials to version control.
-- Keep API keys, passwords, and verification links private.
-- Use dedicated test accounts for automated testing.
-- If sharing an `.env.example` file, include placeholder values only.
 
 ### 4. Running Tests
 
